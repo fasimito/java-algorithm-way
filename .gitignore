@@ -7,6 +7,7 @@ yarn-error.log*
 
 .idea
 .idea/vcs.xml
+*.iml
 
 # Runtime data
 pids
