@@ -8,6 +8,7 @@
         <module>graphic-dpf</module>
         <module>algorithm-http</module>
         <module>algorithm-jdkspec</module>
+        <module>algorithm-threads</module>
     </modules>
 
     <parent>
