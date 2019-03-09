@@ -6,14 +6,14 @@ This is introduce you many JDK's specifications, mapped with some code implement
 
 Hashtable put源码如下：
 ```
-public synchronized V put(K key, V value) {  //###### 注意这里1  
+public synchronized V put(K key, V value) {
   // Make sure the value is not null  
-  if (value == null) { //###### 注意这里 2  
+  if (value == null) { 
     throw new NullPointerException();  
   }  
   // Makes sure the key is not already in the hashtable.  
   Entry tab[] = table;  
-  int hash = key.hashCode(); //###### 注意这里 3  
+  int hash = key.hashCode();  
   int index = (hash & 0x7FFFFFFF) % tab.length;  
   for (Entry e = tab[index]; e != null; e = e.next) {  
     if ((e.hash == hash) && e.key.equals(key)) {  
@@ -44,8 +44,8 @@ public synchronized V put(K key, V value) {  //###### 注意这里1
 关于HashMap,分析源码
 
 ```
-public V put(K key, V value) { //###### 注意这里 1  
-  if (key == null)  //###### 注意这里 2  
+public V put(K key, V value) { 
+  if (key == null) 
     return putForNullKey(value);  
   int hash = hash(key.hashCode());  
   int i = indexFor(hash, table.length);  
@@ -59,7 +59,7 @@ public V put(K key, V value) { //###### 注意这里 1
     }  
   }  
   modCount++;  
-  addEntry(hash, key, value, i);  //###### 注意这里   
+  addEntry(hash, key, value, i);   
   return null;  
 }  
 ```
