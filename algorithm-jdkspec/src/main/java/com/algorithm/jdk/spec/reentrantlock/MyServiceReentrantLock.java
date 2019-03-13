@@ -4,6 +4,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @Author Jate.ma
+ */
 public class MyServiceReentrantLock {
     private Lock lock = new ReentrantLock();
     private Condition condition=lock.newCondition();
